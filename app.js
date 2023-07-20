@@ -4,4 +4,6 @@ const clientSecret = "83ec1a35d73dd4ed";
 
 import AppExtensionsSDK from "@pipedrive/app-extensions-sdk";
 
-const sdk = await new AppExtensionsSDK().initialize();
+const sdk = await new AppExtensionsSDK({ identifier: sdkID }).initialize({
+  size: { height: 500, width: 500 },
+});
