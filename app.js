@@ -9,3 +9,4 @@ async function init() {
     size: { height: 500, width: 500 },
   });
 }
+init();
