@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <!-- <script src="https://api.pipedrive.com/api/client/v1/sdk.js"></script> -->
-  <script defer src="/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@pipedrive/app-extensions-sdk@0/dist/index.umd.js"></script>
+  <!-- <script defer src="/app.js"></script> -->
 </head>
 <body>
   <div id="div">test</div>
@@ -14,5 +14,10 @@
     <input type="text" placeholder="2" name="" id="">
     <input type="text" placeholder="3" name="" id="">
   </div>
+  <script>
+    (async function() {
+      const sdk = await new AppExtensionsSDK().initialize();
+    })();
+  </script>
 </body>
 </html>
