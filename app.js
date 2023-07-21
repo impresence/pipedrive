@@ -54,10 +54,6 @@ form.addEventListener("submit", async (event) => {
       body: JSON.stringify(formData),
     });
 
-    if (!response.ok) {
-      throw new Error("Ошибка при отправке данных на сервер");
-    }
-
     const responseData = await response.json();
     console.log("Создана новая сделка:", responseData);
   } catch (error) {
