@@ -14,7 +14,6 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
-  margin-right: 20px; /* */
 }
 
 input,
@@ -85,6 +84,11 @@ textarea {
   width: 50%;
 }
 #zipCode {
+  width: 50%;
+}
+
+#startTime,
+#endTime {
   width: 50%;
 }
 
