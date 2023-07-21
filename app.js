@@ -4,16 +4,18 @@ const sdkID = "ab75de33-db3d-4c4c-89ed-136adfa1b57b";
 const apiKey = "9120af394df9e7eb5f262b64fbf92690228a0cb6";
 const ClientId = "6799ba7898f04ad8";
 const ClientSecret = "78e892b74083d927953acf9f9cb46e2a943a4786";
-const code = "11338626.15456594.280e20a303fcadf8a53c7b0e5b30e96f650d5104";
+const code = "11339253.15456594.a32ba4a3ad08321fa1ba057aa1f4d78fabdaabc0";
 const auth = {
   access_token:
-    "6LcxTod0WdO9mJs9RzHGmr1OwjriT4ZNe7PFsxR91PrjnVpVJoeJkOgxlcVqaJwkh6DbR1oZWQQu/fF7cfjaRyKnOTWtajaCaXELd94Scy7FwKxKrj1wF41YdxJe/WjEOQ7ORIhrlBiSV7Fk5uqJV12EyrhqABXa1Wju4rjkkYVv1Mzn8EN+fqopNjtCWwoItum4bjFwBeyihO+FSbfTAxH1u8HLFe8d//4gGS1xQQY40yhXQQES6SXzEOa8RcLB03zwOYn1g+weLrxd+wqhiRyehF7j5w==",
+    "LyzxsAeokq1lYuZ49oNKiH+0j+hd9CfwRVF1S7u/eoSciDcfIdaUnFJM/2iT9unHBs7yplY7YfJRPlaV/07ouFu9vsYClxk8yun94njV4YLXNHd7tQ9bsG1HN+m5seahCF4J6M83zhjJ0e5TJYTQXODI/rf/xkN5T16NkJ0BCFUbny1O7/5PjEOvcTuOQ3nn4xqqb+dkhN8U105Jq4eDnAEKXcJSU4hHmtkvC1jXJYSxkz05JiPbUFCBVyE4kjCKWkYoXOz4IafAiWoyqEbt1SR+ryuSKA==",
   token_type: "Bearer",
   expires_in: 3599,
-  refresh_token: "11338626:15456594:5934c951cb33bf46704c7b82618f7f63ab21d9d9",
+  refresh_token: "11339253:15456594:859f5c5a6de370f64c8acaf818af45727d87ad5a",
   scope: "base,deals:full,users:read",
-  api_domain: "https://salesautomators7.pipedrive.com",
-}(async function () {
+  api_domain: "https://salesautomators-sandbox8.pipedrive.com",
+};
+
+(async function () {
   const sdk = await new AppExtensionsSDK().initialize({
     size: { height: 800, width: 1200 },
   });
@@ -39,7 +41,6 @@ form.addEventListener("submit", async (event) => {
     lastName: lastName,
     phone: phone,
     email: email,
-
   };
 
   try {
@@ -47,7 +48,7 @@ form.addEventListener("submit", async (event) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        'Authorization': `Bearer ${accessToken}`,
+        Authorization: `Bearer ${accessToken}`,
       },
       body: JSON.stringify(formData),
     });
@@ -57,7 +58,7 @@ form.addEventListener("submit", async (event) => {
     }
 
     const responseData = await response.json();
-    console.log('Создана новая сделка:', responseData);
+    console.log("Создана новая сделка:", responseData);
   } catch (error) {
     console.error("Ошибка при отправке данных на сервер:", error);
   }
