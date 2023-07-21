@@ -1,0 +1,80 @@
+body {
+  background-color: rgb(238, 238, 238);
+}
+
+* {
+  margin: 5px;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.block {
+  margin: 20px;
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 25px;
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: 47px;
+  align-self: flex-start;
+}
+
+.full-size-input {
+  width: 80%;
+}
+
+.name-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 83%;
+  margin: 0;
+}
+#firstName {
+  width: 50%;
+}
+#lastName {
+  width: 50%;
+}
+
+.input {
+  padding: 10px 0;
+  /* margin: 5px; */
+  text-indent: 5px;
+}
+
+/* Block 2 */
+
+#jobType {
+  width: 50%;
+  margin-left: 0;
+}
+#jobSource {
+  width: 50%;
+  margin-right: 0;
+}
+
+textarea {
+  width: 83%;
+}
+
+/* Block 3 */
+
+#area {
+  width: 50%;
+}
+#zipCode {
+  width: 50%;
+}

@@ -1,25 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="https://cdn.jsdelivr.net/npm/@pipedrive/app-extensions-sdk@0/dist/index.umd.js"></script>
-</head>
-<body>
-  <div id="div">test</div>
-  <input type="text" placeholder="1" name="" id="">
-  <div>
-    <input type="text" placeholder="2" name="" id="">
-    <input type="text" placeholder="3" name="" id="">
-    <h1>some text</h1>
-  </div>
-  <!-- <script>
-    (async function() {
-      const sdk = await new AppExtensionsSDK().initialize();
-      console.log('initialized')
-    })();
-    </script> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@pipedrive/app-extensions-sdk@0/dist/index.umd.js"></script>
+    <title>Modal form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="block block-1">
+        <h1 class="title">Client details</h1>
+        <div class="name-wrapper">
+          <input
+            type="text"
+            placeholder="First name"
+            name="First name"
+            class="input"
+            id="firstName"
+          />
+          <input
+            type="text"
+            placeholder="Last name"
+            name="Last name"
+            class="input"
+            id="lastName"
+          />
+        </div>
+        <input
+          type="text"
+          placeholder="Phone"
+          name="Phone"
+          class="input full-size-input"
+          id="phone"
+        />
+        <input
+          type="text"
+          placeholder="Email (optional)"
+          name="Email"
+          class="input full-size-input"
+          id="email"
+        />
+      </div>
+      <!--  -->
+      <div class="block block-2">
+        <h1 class="title">Job details</h1>
+        <div class="name-wrapper">
+          <select class="input" name="Job type" id="jobType">
+            <option value="Job type">Job type</option>
+          </select>
+          <select class="input" name="Job source" id="jobSource">
+            <option value="Job source">Job source</option>
+          </select>
+        </div>
+        <textarea
+          name="Job description"
+          placeholder="Job description (optional)"
+          id="jobDescription"
+          cols="30"
+          rows="7"
+        ></textarea>
+      </div>
+      <!--  -->
+      <div class="block block-3">
+        <h1 class="title">Service location</h1>
+        <input
+          type="text"
+          placeholder="Address"
+          name="Address"
+          class="input full-size-input"
+          id="address"
+        />
+        <input
+          type="text"
+          placeholder="City"
+          name="City"
+          class="input full-size-input"
+          id="city"
+        />
+        <input
+          type="text"
+          placeholder="Phone"
+          name="Phone"
+          class="input full-size-input"
+          id="phone"
+        />
+        <div class="name-wrapper">
+          <input
+            type="text"
+            placeholder="Zip code"
+            name="Zip code"
+            class="input"
+            id="zipCode"
+          />
+          <select class="input" name="Area" id="area">
+            <option value="Area">Area</option>
+          </select>
+        </div>
+      </div>
+      <div class="block block-1">
+        <h1 class="title">Scheduled</h1>
+        <input
+          type="date"
+          placeholder="Phone"
+          name="Phone"
+          class="input full-size-input"
+          id="phone"
+        />
+        <div class="name-wrapper">
+          <input
+            type="time"
+            placeholder="First name"
+            name="First name"
+            class="input"
+            id="firstName"
+          />
+          <input
+            type="time"
+            placeholder="Last name"
+            name="Last name"
+            class="input"
+            id="lastName"
+          />
+        </div>
+        <select
+          class="full-size-input input"
+          name="Select technician"
+          id="selectTechnician"
+        >
+          <option value="Select technician">Select technician</option>
+        </select>
+      </div>
+    </div>
     <script defer src="app.js"></script>
-</body>
+  </body>
 </html>

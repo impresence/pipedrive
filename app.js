@@ -4,7 +4,7 @@ const clientSecret = "83ec1a35d73dd4ed";
 
 (async function () {
   const sdk = await new AppExtensionsSDK().initialize({
-    size: { height: 500, width: 500 },
+    size: { height: 1000, width: 1000 },
   });
   console.log("initialized");
 })();
