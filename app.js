@@ -38,6 +38,7 @@ form.addEventListener("submit", async (event) => {
   console.log(email)
 
   const formData = {
+    title: 'test deal',
     firstName: firstName,
     lastName: lastName,
     phone: phone,
