@@ -35,6 +35,7 @@ form.addEventListener("submit", async (event) => {
   const lastName = document.getElementById("lastName").value;
   const phone = document.getElementById("phone").value;
   const email = document.getElementById("email").value;
+  console.log(email)
 
   const formData = {
     firstName: firstName,
