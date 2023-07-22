@@ -7,7 +7,7 @@ const ClientSecret = "78e892b74083d927953acf9f9cb46e2a943a4786";
 const code = "11339253.15456594.a32ba4a3ad08321fa1ba057aa1f4d78fabdaabc0";
 const auth = {
   access_token:
-    "LyzxsAeokq1lYuZ49oNKiH+0j+hd9CfwRVF1S7u/eoSciDcfIdaUnFJM/2iT9unHBs7yplY7YfJRPlaV/07ouFu9vsYClxk8yun94njV4YLXNHd7tQ9bsG1HN+m5seahCF4J6M83zhjJ0e5TJYTQXODI/rf/xkN5T16NkJ0BCFUbny1O7/5PjEOvcTuOQ3nn4xqqb+dkhN8U105Jq4eDnAEKXcJSU4hHmtkvC1jXJYSxkz05JiPbUFCBVyE4kjCKWkYoXOz4IafAiWoyqEbt1SR+ryuSKA==",
+    "ERrRB3jAu+2lT3X/+M7YUcKOUMMZe4QUC57XxQys7b1RUbz16R23erc/KyOpYjfpH6Jvg7O6G+MXQJOgCyXa6FQneweSCtxFYP1MS/u8qa7hzknKrFXGyERMsUNO5VhlinV37xsSKjiFv0GX7DfrphGlQo75ktD9Lprim4GQeqsTRB6q670SJ6taFcU8alpxK1f7irtHLmKJC8Po4zKaSgBFLDK0d22Hr2rcvteg2P5y7ClCHSjr3IJ6iwKgZorD+p7+b/QrlpFiWAMaUCtTeTT5jRF0MQ==",
   token_type: "Bearer",
   expires_in: 3599,
   refresh_token: "11339253:15456594:859f5c5a6de370f64c8acaf818af45727d87ad5a",
@@ -27,7 +27,7 @@ const form = document.getElementById("container");
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const accessToken =
-    "LyzxsAeokq1lYuZ49oNKiH+0j+hd9CfwRVF1S7u/eoSciDcfIdaUnFJM/2iT9unHBs7yplY7YfJRPlaV/07ouFu9vsYClxk8yun94njV4YLXNHd7tQ9bsG1HN+m5seahCF4J6M83zhjJ0e5TJYTQXODI/rf/xkN5T16NkJ0BCFUbny1O7/5PjEOvcTuOQ3nn4xqqb+dkhN8U105Jq4eDnAEKXcJSU4hHmtkvC1jXJYSxkz05JiPbUFCBVyE4kjCKWkYoXOz4IafAiWoyqEbt1SR+ryuSKA==";
+    "ERrRB3jAu+2lT3X/+M7YUcKOUMMZe4QUC57XxQys7b1RUbz16R23erc/KyOpYjfpH6Jvg7O6G+MXQJOgCyXa6FQneweSCtxFYP1MS/u8qa7hzknKrFXGyERMsUNO5VhlinV37xsSKjiFv0GX7DfrphGlQo75ktD9Lprim4GQeqsTRB6q670SJ6taFcU8alpxK1f7irtHLmKJC8Po4zKaSgBFLDK0d22Hr2rcvteg2P5y7ClCHSjr3IJ6iwKgZorD+p7+b/QrlpFiWAMaUCtTeTT5jRF0MQ==";
   const apiUrl = "https://api.pipedrive.com/v1/deals";
 
   // Собираем данные из полей формы
@@ -35,10 +35,10 @@ form.addEventListener("submit", async (event) => {
   const lastName = document.getElementById("lastName").value;
   const phone = document.getElementById("phone").value;
   const email = document.getElementById("email").value;
-  console.log(email)
+  console.log(email);
 
   const formData = {
-    title: 'test deal',
+    title: "test deal",
     firstName: firstName,
     lastName: lastName,
     phone: phone,
